@@ -51,7 +51,8 @@ public class EventListener implements Listener {
         Block block = event.getBlock();
         
         if (playerInRangeProtection(block.getLocation(), player)) {
-            if (player.IsOp = true){
+            if (player.isPermissionSet(fpax.bypassbp) = true){
+                   player.sendMessage("BlockProtect Bypassed By OP - Forked By humanpuff69 FPAX");
                else {
                       player.sendMessage(plugin.msg("You can't use: " + block.getName() + " in this area."));
             event.setCancelled(true);
