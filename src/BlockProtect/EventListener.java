@@ -51,8 +51,12 @@ public class EventListener implements Listener {
         Block block = event.getBlock();
         
         if (playerInRangeProtection(block.getLocation(), player)) {
-            player.sendMessage(plugin.msg("You can't use: " + block.getName() + " in this area."));
+            if (player.IsOp = true){
+               else {
+                      player.sendMessage(plugin.msg("You can't use: " + block.getName() + " in this area."));
             event.setCancelled(true);
+             }
+         
         }
         
         
